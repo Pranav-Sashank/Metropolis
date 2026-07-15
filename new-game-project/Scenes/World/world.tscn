@@ -38,3 +38,5 @@ mesh = SubResource("PlaneMesh_jdw53")
 [node name="BuildPreview" type="Marker3D" parent="." unique_id=185991780]
 
 [node name="CameraRig" parent="." unique_id=1276894958 instance=ExtResource("2_3rhlx")]
+
+[node name="BuildManager" type="Node" parent="." unique_id=603702307]
