@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3vnnnd2fe8u"]
 
-[ext_resource type="Script" uid="uid://dmwh3jk0e0tpv" path="res://Scenes/World/camera_3d.gd" id="1_t1gg8"]
 [ext_resource type="Script" uid="uid://dbjvbegdf8gt5" path="res://Scripts/World.gd" id="1_yp2ti"]
+[ext_resource type="PackedScene" uid="uid://04kc4ygqp26k" path="res://Scenes/Camera/CameraRig.tscn" id="2_3rhlx"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_53ik6"]
 
@@ -27,11 +27,6 @@ transform = Transform3D(0.70710677, 0.61237246, -0.35355335, 0, 0.49999997, 0.86
 [node name="WorldEnvironment" type="WorldEnvironment" parent="DirectionalLight3D" unique_id=107877615]
 environment = SubResource("Environment_jdw53")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=2128178348]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 48.175964, 48.175964)
-current = true
-script = ExtResource("1_t1gg8")
-
 [node name="Ground" type="StaticBody3D" parent="." unique_id=1792650949]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1530859313]
@@ -41,3 +36,5 @@ shape = SubResource("BoxShape3D_vfu74")
 mesh = SubResource("PlaneMesh_jdw53")
 
 [node name="BuildPreview" type="Marker3D" parent="." unique_id=185991780]
+
+[node name="CameraRig" parent="." unique_id=1276894958 instance=ExtResource("2_3rhlx")]

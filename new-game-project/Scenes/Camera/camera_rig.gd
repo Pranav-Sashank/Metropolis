@@ -1,9 +1,9 @@
-extends Camera3D
+extends Node3D
 
-@export var move_speed := 20.0
+@export var move_speed: float = 20.0
 
 func _process(delta):
-	var direction = Vector3.ZERO
+	var direction := Vector3.ZERO
 
 	if Input.is_action_pressed("ui_up"):
 		direction.z -= 1
@@ -16,5 +16,8 @@ func _process(delta):
 
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1
+
+	if direction != Vector3.ZERO:
+		direction = direction.normalized()
 
 	position += direction * move_speed * delta

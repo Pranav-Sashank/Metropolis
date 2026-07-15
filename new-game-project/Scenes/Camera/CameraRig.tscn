@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://04kc4ygqp26k"]
 
-[ext_resource type="Script" uid="uid://dmwh3jk0e0tpv" path="res://Scenes/World/camera_3d.gd" id="1_co4bg"]
+[ext_resource type="Script" uid="uid://r1qucbujawau" path="res://Scenes/Camera/camera_rig.gd" id="1_co4bg"]
 
-[node name="CameraRig" type="Node3D" unique_id=1349455347]
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=477655216]
-transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 48.175964, 48.175964)
-current = true
+[node name="CameraRig" type="Node3D" unique_id=1276894958]
 script = ExtResource("1_co4bg")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1460542769]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 25, 25)
+current = true
